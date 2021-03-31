@@ -16,7 +16,6 @@ class MyStack:
         return thing
 
     def pop(self, expect=None):
-
         try:
             thing = self.stack.pop(-1)
         except IndexError:
@@ -62,7 +61,7 @@ def balanced(some_string: str):
         if not action[b](subst[b]):
             res = False
             break
-    if len(stack) != 0:
+    if not stack.isEmpty():
         res = False
 
     return res
